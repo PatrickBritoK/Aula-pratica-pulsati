@@ -9,14 +9,13 @@
 <body>
     <script>
 
-        let variavel = 'teste'
+        let palavra = parseFloat(prompt('Digite uma palavra'))
 
-        if (typeof variavel === Boolean){
-            document.write('essa variavel é booleana')
-        } else{
-            document.write('essa variavel nao é booleana')
+        if (palavra === palavra.split("").reverse().join("")) {
+            document.write('Essa string é um palíndromo')
+        } else {
+            document.write('Não é um palíndromo')
         }
-        
     </script>
 </body>
 </html>
