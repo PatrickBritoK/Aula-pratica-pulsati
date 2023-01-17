@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let salario = parseFloat(prompt('informe seu salario'))
+        let porcentagem1 = 0.20
+        let porcentagem2 = 0.15
+        let porcentagem3 = 0.10
+
+        if (salario < 280.00){
+            document.write('Com 20% de aumento seu salario vai aumentar:R$ ', salario * porcentagem1)
+        } else if (salario >= 280.00 && salario <= 700.00){
+            document.write('Com 15% de aumento seu salario vai aumentar:R$ ', salario * porcentagem2)
+        } else {
+            document.write('Com 10% de aumento seu salario vai aumentar:R$ ', salario * porcentagem3)
+        }
+        
+    </script>
+</body>
+</html>

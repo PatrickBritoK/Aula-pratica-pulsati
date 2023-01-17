@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let numero = parseFloat(prompt('digite um numero'))
+        let numero2 = parseFloat(prompt('digite outro numero'))
+        let numero3 = parseFloat(prompt('digite outro numero'))
+
+        let cres = numero
+        
+        if(numero < numero2){
+            cres=numero2
+            numero2=numero
+            numero=cres
+        } else if (numero3 < numero1){
+            cres=numero3
+            numero3=numero
+            numero=cres
+        } else if (numero3 < numero2){
+            cres=numero3
+            numero3=numero2
+            numero2=cres
+        }       document.write(numero + '-' + numero2 + '-' + numero3)
+    </script>
+</body>
+</html>
