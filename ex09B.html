@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+        
+        let horas = parseFloat(prompt('Que horas são?'))
+
+        if(horas >= 0 && horas <= 11){
+            document.write('Bom dia')
+        } else if(horas >= 12 && horas <= 17){
+            document.write('Boa tarde')
+        } else if(horas >= 18 && horas <= 23){
+            document.write('Boa noite')
+        } else {
+            document.write('Hora invalida')
+        }
+    </script>
+</body>
+</html>
