@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <h1>Contas matematicas</h1>
+    <script>
+
+        let num1 = parseFloat(prompt('informe um número'))
+        let num2 = parseFloat(prompt('informe outro número'))
+
+        let soma = (num1 + num2)
+        let subtraçao = (num1 - num2)
+        let multiplicaçao = (num1 * num2)
+        let divisao = (num1 / num2)
+
+        document.write(`O número ${num1} <strong>Somado</strong> por ${num2} fica = ${soma}<br>`)
+        document.write(`O número ${num1} <strong>Subtraido</strong> por ${num2} fica = ${subtraçao}<br>`)
+        document.write(`O número ${num1} <strong>Multiplicado</strong> por ${num2} fica = ${multiplicaçao}<br>`)
+        document.write(`O número ${num1} <strong>Dividido</strong> por ${num2} fica = ${divisao}`)
+
+    </script>
+</body>
+</html>

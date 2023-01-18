@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tabuada</title>
+    <title>Document</title>
 </head>
 <body>
     <style>
@@ -14,14 +14,17 @@
         }
     </style>
     <script>
+        let aleatorio = []
+        let valor = 200
 
-        let tabuada = parseFloat(prompt('Informe um número'))
-
-        for(let i = 1; i < 11; i++){
-            document.write(tabuada + ' x ' + i + ' = ' + (tabuada * i) + '<br>')
-
-            }
-        
+        if(aleatorio.length == valor){
+            if(corfim('chegou a 200')) aleatorio = [];
+            else return;
+        }
+        let nsei = Math.ceil(Math.random() * valor);
+        while (aleatorio.indexOf(nsei) >= 0){
+            nsei = Math.ceil(Math.random() * valor);
+        }
     </script>
 </body>
 </html>
