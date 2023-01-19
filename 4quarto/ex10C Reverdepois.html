@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(32, 32, 31);
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        /*let numero = parseInt(prompt('Digite quantas temperaturas voce quer registrar'))
+        for(let i = 0; i < numero; i++){
+            let temperatura = prompt('informe as temperaturas')
+        }
+        let min = Math.min(temperatura)
+        let max = Math.max(temperatura)
+        let media = Math.round(temperatura)
+
+        document.write(`A temperatura min é: ${min}<br>`)
+        document.write(`A temperatura max é: ${max}<br>`)
+        document.write(`A temperatura media é: ${media}`)*/ 
+
+        let quantidade = 5;
+        let temperaturas = [];
+        let soma = 0;
+        let maior = 0;
+        let menor = 10000;
+
+        for (let i = 0; i < quantidade;i++){
+            temperaturas.push(parseFloat(prompt('informe as temperaturas')));
+        }
+
+        for (let i = 0; i < temperaturas.length; i++){
+            soma = soma + temperaturas[i];
+        }
+        let media = temperaturas / soma;
+
+        for(let i = 0; i <temperaturas.length; i++){
+            temperaturas[i]
+            if(temperaturas[i] > maior){
+                maior = temperaturas
+            }
+            if(temperaturas[i] < menor){
+                menor = temperaturas
+            }
+        }
+        document.write(`As temperaturas foram: ${temperaturas}<br>`)
+        document.write(`A menor temperatura é: ${menor}<br>`)
+        document.write(`A maior temperatura é: ${maior}<br>`)
+        document.write(`A media das temperaturas são: ${media}`)
+
+    </script>
+</body>
+</html>

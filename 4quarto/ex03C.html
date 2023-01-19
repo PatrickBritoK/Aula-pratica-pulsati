@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(32, 32, 31);
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        let usuario = prompt('informe o nome de usuario')
+        let senha = prompt('digite a senha')
+
+        usario = ''
+        senha = ''
+
+        while (usario == senha){
+            confirm('Usuario igual a senha, faça uma diferente')
+            usuario = prompt('informe o nome de usuario')
+            senha = prompt('digite a senha')
+        }
+        document.write(`Usuario: ${usuario}<br> Senha: ${senha}`)
+
+    </script>
+</body>
+</html>

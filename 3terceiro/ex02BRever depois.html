@@ -15,8 +15,18 @@
     </style>
     <script>
 
-        let num = parseInt(prompt('Digite um valor'))
-        let resultado = num.repeat(10)
+        let num = parseInt(
+            prompt('Informe a quantidade de notas: ')
+        )
+        for(let i = 0; i < num; i++){
+            let nota = prompt(
+                'Informe as notas: '
+            )
+            let resultado = (num * nota) / num
+            document.write(`a media das notas é = ${resultado}<br> `)
+
+        }
+        //document.write(`a media das notas é = ${resultado} `)
     </script>
 </body>
 </html>

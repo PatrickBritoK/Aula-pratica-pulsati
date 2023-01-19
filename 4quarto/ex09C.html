@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        let A = 0;
+        let B = 0;
+        let C = 0;
+        let invalidos = 0;
+
+        let totaldevotos = parseInt(
+            prompt('Informe a quantidade de eleitores')
+        )
+        for(let i= 0;i < totaldevotos; i ++){
+            let voto = prompt(
+                'Informe seu voto.\n A = 1.\n B = 2.\n C = 3'
+            )
+            if(voto == 1){
+                A++;
+            }
+            else if(voto == 2){
+                B++;
+            }
+            else if(voto == 3){
+                C++;
+            } else{
+                invalidos++;
+            }
+        }
+        resultado = `O resultado da eleição foi:<br>
+        Total de Votos: ${totaldevotos}<br>
+        A: ${A} <br>
+        B: ${B} <br>
+        C: ${C} <br>
+        invalidos: ${invalidos}
+        `
+
+        document.write(resultado)
+
+    </script>
+</body>
+</html>

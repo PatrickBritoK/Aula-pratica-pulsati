@@ -9,46 +9,23 @@
 <body>
     <style>
         body{
-            background-color: antiquewhite;
+            background-color: rgb(32, 32, 31);
             font:normal 18pt arial;
         }
     </style>
     <script>
 
-        let A = 0;
-        let B = 0;
-        let C = 0;
-        let invalidos = 0;
+        let carro = parseFloat(prompt('Digite o valor do carro'))
+        let ano = parseFloat(prompt('Digite o ano do carro'))
 
-        let totaldevotos = parseInt(
-            prompt('Informe a quantidade de eleitores')
-        )
-        for(let i= 0;i < totaldevotos; i ++){
-            let voto = prompt(
-                'Informe seu voto.\n A = 1.\n B = 2.\n C = 3'
-            )
-            if(voto == 1){
-                A++;
-            }
-            else if(voto == 2){
-                B++;
-            }
-            else if(voto == 3){
-                C++;
-            } else{
-                invalidos++;
-            }
+        while(carro <= 20.000 || ano <= 2020){
+            confirm('Valor minimo: 20.000 e Ano minimo: 2020')
+            carro = prompt('Digite o valor do carro')
+            ano = prompt('Digite o ano do carro')
         }
-        resultado = `O resultado da eleição foi:<br>
-        Total de Votos: ${totaldevotos}<br>
-        A: ${A} <br>
-        B: ${B} <br>
-        C: ${C} <br>
-        invalidos: ${invalidos}
-        `
-
-        document.write(resultado)
-
+        document.write(`Valor: ${carro}`)
+        document.write(`Ano: ${ano}`)
+        document.write('Seu carro passou na revisão')
     </script>
 </body>
 </html>
