@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        let entrada = ['1','2','5','2','3','2']
+
+        entrada.sort()
+
+        let frequente = null;
+        let cnt = 0
+
+        for(i = 0; i <entrada,length; i ++){
+            if(entrada[i] !=frequente){
+                if(cnt > 0){
+                    document.write(frequente + ' aparece ' + cnt + ' vezes<br>')
+                }
+                frequente = entrada[i];
+                cnt = 1;
+            } else{
+                cnt++
+            }
+        }
+        //mas pq nao funciona?
+    </script>
+</body>
+</html>

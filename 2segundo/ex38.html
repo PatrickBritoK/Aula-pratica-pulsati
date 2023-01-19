@@ -13,8 +13,9 @@
             font:normal 18pt arial;
         }
     </style>
+    <h1>Número fatorial</h1>
     <script>
-        let num = parseInt(prompt('Escolha um numero'))
+        /*let num = parseInt(prompt('Escolha um numero'))
         function fatorial(num){
         let contador = 1;
         
@@ -25,7 +26,22 @@
         document.write(contador)
 
         }
-        fatorial();
+        fatorial();*/
+
+        function fatorial(){
+        let num = parseInt(prompt('Digite um número'));
+
+        let resultado = 1;
+        let count = 1;
+
+        while(count<=num){
+            resultado *= count;
+            count ++;
+        }
+        document.write(resultado);
+        }
+
+        
         </script>
 </body>
 </html>
