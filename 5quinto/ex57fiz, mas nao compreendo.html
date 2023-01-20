@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        /*let array1 = prompt('Escolha uma palavra')
+        
+        for(let i = 0; i < array1.length; i ++){
+            let array1 = [i]
+        }
+
+        array1.sort()
+
+        let array2 = prompt('Escolha outra palavra')
+        for(let i = 0; i < array2.length; i ++){
+            let array2 = [i]
+        }
+
+        array2.sort()
+
+        if(array1 == array2){
+            return true
+        }else{
+            return false;
+        } 
+
+        if(array1.length == array2.length){
+            return true
+        } else {
+            return false
+        }*/
+
+        /*function chegarAnagrama(a, b){
+            let array = {}
+            if(a === b){
+                return true;
+            }
+            if(a !== b){
+                return false;
+            }
+            for(let i = 0; i < a.length; i++){
+                let res 
+            }
+        }*/
+
+        let palavra1 = prompt('Informe a primeira palavra')
+        let array1 = []; //lista vazia
+        for(let i = 0; i < palavra1.length; i ++){
+            array1.push(palavra1[i])    //push  vai "empurrar" uma palavra.
+        }
+        array1.sort(); //sort vai colocar tudo em ordem alfabetica ou numerica
+
+        let palavra2 = prompt('Informe a segunda palavra')
+        let array2 = [];
+        for(let i = 0; i < palavra2.length; i++){
+            array2.push(palavra2[i])
+        }
+        array2.sort();
+
+        let palavraAnagrama
+
+        for(let i = 0; i < array1.length;i++){
+            if(array1[i] == array2[i]){ //vai comparar para saber se é igual
+                palavraAnagrama = true //vai voltar verdadeiro
+            } else {
+                palavraAnagrama = false //vai voltar falso
+            } break;  //vai quebrar o comando.
+        }
+        if( array1.length != array2.length){
+            palavraAnagrama = false;
+        }
+        let resultado;
+        if(palavraAnagrama){
+            resultado = "É uma anagrama"
+        } else {
+            resultado = "Não é um anagrama"
+        }
+        document.write(`Primeira palavra informada: ${palavra1}<br>`)
+        document.write(`Segunda palavra informada: ${palavra2}<br>`)
+        document.write(`${resultado}`)
+    </script>
+</body>
+</html>

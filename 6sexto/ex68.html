@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+        function mergeSort(array){
+            if(array.length <= 1){
+                return array
+            }
+            const middle = Math.floor(array.length / 2)  //Math.floor retorna o menor número inteiro dentre o número "x".
+            const left = array.slice(0, middle)  //slice() retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é incluído) de um array original. O Array original não é modificado.
+            const right = array.slice(middle)
+
+            return mergeSort(mergeSort(left),mergeSort(right));
+        }
+        function mergeSort2(left, right){
+            const array = []
+            
+        }
+
+    </script>
+</body>
+</html>

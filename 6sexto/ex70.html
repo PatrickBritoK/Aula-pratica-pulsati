@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+
+        /*function Binario(vetor, item){
+            let a = 0;
+            let b = vetor.length - 1
+            let c = false
+
+            while(a <= b && ! c){
+                lista = Math.ceil(a + b())
+            }
+        }*/
+
+        //o array precisa estar em ordem(pelo o que eu sei)
+        let array = [1,5,7,15,24]
+
+
+        let binario = (array, left , right, valor) =>{  //valor esquerdo para o valor direito
+            if(left >= right){  //vai verificar se esta ordenado
+                indice = parseInt(left +(right-left)/2) //divide em 2 ou acha o meio do array
+                
+                if(array[indice] === valor){ //se o valor do meio do array for igual ao valor desejado o programa chega ao fim.
+                    return valor 
+                }
+                if(array[indice] > valor){
+                    return binario(array,left, indice -1, valor)
+                }
+                return binario(array, indice + 1, right, valor)
+            }
+            return 'nao achou'
+        }
+        document.write(binario(array,0, array.length - 1,24))
+
+        //Nao entendi nada mas ta funcionando
+    </script>
+</body>
+</html>

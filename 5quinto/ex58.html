@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+        //Recebe as datas no padrão americano
+        let Data1 = new Date(prompt('Qual a primeira data? ')) //
+        let Data2 = new Date(prompt('Qual a outra data? '))
+
+        //transforma a data em padrão Br
+        //+1 pq o começa sempre a contar do 0
+        let DataBR1 = Data1.getDate() + "/" + (Data1.getMonth() + 1) + "/" + Data1.getFullYear();
+        let DataBR2 = Data2.getDate() + '/' + (Data2.getMonth() + 1) + "/" + Data2.getFullYear();
+
+        //converter as datas em milissegundos
+        let Data1Milissegundos = new Date(DataBR1).getTime();
+        let Data2milissegundos = new Date(DataBR2).getTime();
+
+        //converter 1 dia em milissegundos 
+        let UmDiamilissegundos = 1000*60*60*24
+
+        //calculo de diferença
+        let diferençaMilissegundos = Data1Milissegundos - Data2milissegundos
+
+        //converter para data
+        let diferneçaData = Math.round(diferençaMilissegundos/UmDiamilissegundos)
+
+        document.write(`A diferença de dias é: ${diferneçaData}`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <h1>Pangrama</h1>
+    <script>
+
+        let frase1 = prompt('Digite uma frase')
+        let array1 = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+        for(let i = 0; i < frase1.length; i++){
+            array1.push(frase1[i])
+        }
+        array1.sort();
+
+        let frase2 = prompt('Digite a segunda frase')
+        let array2 = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+        for(let i = 0; i < frase2.length; i++){
+            array2.push(frase1[i])
+        }
+        array2.sort();
+
+        let palavraPangrama;
+
+        for(let i = 0; i < array1.length; i++){
+            if(array1[i] == array2[i]){
+                palavraPangrama = true;
+            } else {
+                palavraPangrama = false;
+            } break;
+        }
+        let resultado;
+        if(palavraPangrama){
+            resultado = 'A frase é um pangrama'
+        } else {
+            resultado = 'A frase não é um pangrama'
+        }
+        document.write(`Primeira frase: ${frase1}<br>`)
+        document.write(`Segunda frase: ${frase2}<br>`)
+        document.write(`${resultado}`)
+
+        //exemplo de pangrama: Bancos fúteis pagavam-lhe queijo, whisky e xadrez
+        //Juiz faz com que whisky de malte baixe logo preço de venda 
+
+    </script>
+</body>
+</html>
