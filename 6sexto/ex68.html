@@ -14,20 +14,46 @@
         }
     </style>
     <script>
-        function mergeSort(array){
-            if(array.length <= 1){
-                return array
-            }
-            const middle = Math.floor(array.length / 2)  //Math.floor retorna o menor número inteiro dentre o número "x".
-            const left = array.slice(0, middle)  //slice() retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é incluído) de um array original. O Array original não é modificado.
-            const right = array.slice(middle)
+        const list = [23, 4, 42, 15, 16, 8, 3]
 
-            return mergeSort(mergeSort(left),mergeSort(right));
-        }
-        function mergeSort2(left, right){
-            const array = []
+            const mergeSort = (list) =>{
+                if(list.length <= 1) return list;
+            const middle = list.length / 2 ;
+            const left = list.slice(0, middle);
+            const right = list.slice(middle, list.length);
+                return merge(mergeSort(left), mergeSort(right));
+                }
+
+            const merge = (left, right) => {
+                var result = [];
+                    while(left.length || right.length) {
+                        if(left.length && right.length) {
+                            if(left[0] < right[0]) {
+                                result.push(left.shift())
+                        } else {
+                                result.push(right.shift())
+                                }
+                            } else if(left.length) {
+                                result.push(left.shift())
+                            } else {
+                                result.push(right.shift())
+                            }
+                            }
+                            return result;
+                            }
+
+                            console.log(mergeSort(list)) // [ 3, 4, 8, 15, 16, 23, 42 ]
             
-        }
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+        //peguei na net pra tentar entender
+
 
     </script>
 </body>
