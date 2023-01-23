@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<h1>Desafio</h1>
+<body bgcolor="black">
+    <style>
+        *{
+            margin: 5;
+            padding: 5;
+        }
+        body{
+            font: normal 16pt Arial;
+            color: white;
+        }
+        .fundo{
+            position: absolute;
+            background-color: rgb(155, 128, 96);
+            height: 100%;
+        }
+        
+    </style>
+    <script>
+        let num1 = parseFloat(prompt('Digite um número'))
+        let num2 = parseFloat(prompt('Digite outro número'))
+        let num3 = parseFloat(prompt('Digite outro número'))
+        let num4 = parseFloat(prompt('Digite outro número'))
+
+        let array = []
+
+        array.push(num1)
+        array.push(num2)
+        array.push(num3)
+        array.push(num4)
+
+        let max = Math.max(...array)
+        
+        let divisao = max / 2
+        
+        if(divisao == num1){
+            document.write(`O número ${num1} existe na lista`)
+        } else if(divisao == num2){
+            document.write(`O número ${num2} existe na lista`)
+        } else if(divisao == num3){
+            document.write(`O número ${num3} existe na lista`)
+        } else if(divisao == num4){
+            document.write(`O número ${num4} existe na lista`)
+        } else {
+          document.write('O numero não está na lista.')
+        }
+            
+
+    </script>
+</body>
+</html>

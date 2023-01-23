@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font: normal 16pt Arial;
+        }
+    </style>
+    <h1>Maior/Menor valor e seu indice.</h1>
+    <script>
+        let array = [3,8,9,1,7,2]
+
+        let min = Math.min(...array);
+        let max = Math.max(...array);
+        document.write(`O menor valor da lista é: ${min}<br> e o seu indice é: `,array.indexOf(min),'<br>')
+        document.write(`O maior valor da lista é: ${max}<br> e o seu indice é: `,array.indexOf(max))
+    </script>
+</body>
+</html>
