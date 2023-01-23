@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html, body{
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+header{
+    height: 200px;
+    padding: 20px 0;
+}
+.logo{
+    width: 50%;
+}
+.menu{
+    width: 50%;
+    text-align: right;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+.extras{
+    position: absolute;
+    bottom: 50;
+    right: -300px;
+    width: 1000px;
+    height: 1000px;
+    background-color: rgb(117, 0, 0);
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.extras2{
+    position: absolute;
+    bottom: 1050px;
+    left: -950px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(117, 0, 0);
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.texto{
+    margin-top: 50px;
+}
+.texto h1{
+    font-size: 25px;
+}
+.texto p{
+    margin: 20px 0;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 500px;
+}
+.texto button{
+    border: 0;
+    color: white;
+    background-color: rgb(117, 0, 0);
+    border-radius: 25% 10%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+.botao2{
+    position: absolute;
+    border: 0;
+    bottom: 700px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
