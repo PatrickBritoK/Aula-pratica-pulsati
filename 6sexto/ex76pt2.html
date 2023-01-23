@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let matriz = [
+        [2, 2, 2, 2],
+        [4, 4, 4, 4],
+        [6, 6, 6, 6],
+        [8, 8, 8, 8],
+      ];
+      let linha1 = 0;
+      let linha2 = 0;
+      let linha3 = 0;
+      let linha4 = 0;
+      let valor = 0;
+
+      matriz.forEach(function (num) {
+        valor++;
+        for (let i = 0; i < num.length; i++) {
+          if (valor == 1) {
+            linha1 += num[i];
+          }
+          if (valor == 2) {
+            linha2 += num[i];
+          }
+          if (valor == 3) {
+            linha3 += num[i];
+          }
+          if (valor == 4) {
+            linha4 += num[i];
+          }
+        }
+      });
+      document.write(`valores da matriz: ${matriz}<br>`);
+      document.write(`valor da linha 2: ${linha1}<br>`);
+      document.write(`valor da linha 3: ${linha2}<br>`);
+      document.write(`valor da linha 4: ${linha3}<br>`);
+      document.write(`valor da linha 4: ${linha4}<br>`);
+    </script>
+  </body>
+</html>

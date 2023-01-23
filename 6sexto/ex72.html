@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font:normal 18pt arial;
+        }
+    </style>
+    <script>
+        let matriz = [
+            [1,-5,3,-9],
+            [5,8,-2,-3],
+            [9,1,2,-4],
+            [4,-8,4,-8]
+        ]
+        /*let min = Math.min(...matriz);
+        let max = Math.max(...matriz);
+        
+        console.log(`O menor valor da matriz é: ${min}`);
+        console.log(`O maior valor da matriz é: ${max}`);*/
+        
+        //console.log(Math.min(...matriz))
+        console.log(Math.min.apply(null,matriz));  //Não volta o menor nem o maior número.s
+
+</script>
+</body>
+</html>

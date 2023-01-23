@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Media dos valores da matriz</h1>
+    <script>
+        let matriz = [
+            [1,-5,3,-9],
+            [5,8,-2,-3],
+            [9,1,2,-4],
+            [4,-8,4,-8]
+        ]
+        let soma = 0;
+        for(let i = 0; i < matriz.length; i++){
+            soma += parseInt(matriz[i])
+        }
+        //confirm(prompt('Nada da certo')) o programa deu certo, mas nao sei a conta...
+        let media = soma / matriz.length;
+        document.write(media)
+    </script>
+</body>
+</html>

@@ -9,18 +9,50 @@
 <body>
     <script>
 
-        function qs(vet){
+        /*function qs(vet){
             quicksort(vet, 0, vet.length - 1)
         }
-        function Quicksort(vet, incio,fim){
+        function Quicksort(vet, inicio,fim){
         }
         let a = inicio;
         let b = fim;
         let m = Math.floor((a + b)/2)
 
         while (a < b){
-            
+            while(vet[a] < vet[m])
+             a++
+            while(vet[b] > vet[m])
+            b--
+            if(a <= b)
+            {
+                let tempo = vet[a];
+                vet[a] = vet[b];
+                vet[b] = tempo
+                a++
+                b--
+            }
+        } 
+        if(b > inicio){
+            quicksort(vet, inicio, b)
+        if(a < fim)
+            quicksort(vet, b ,fim)
+        }*/
+        
+        function QuickSort(Array){
+            if(Array.length <= 1){
+                return Array;
+            }
+            const pivo = Array[Array.length - 1]
+            const right = []
+            const left = []
+
+            for(let i = 0; i < Array.length -1; i++){
+                Array[i] < pivo ? left.push(Array[i]) : right.push(Array[i]) //O operador ? é usado em instruções condicionais e, quando acompanhado de um :, pode funcionar como uma alternativa compacta para instruções do tipo if...else.
+            }
+            return [...QuickSort(left), pivo , ...QuickSort(right)] //O spread operator (...) espalha os itens que estão contidos em um iterável (um iterável é qualquer coisa que possa ser repetida, como Strings, Arrays, Sets ...)
         }
+        const itens = [4,6,10,11,15,1,7,14,100,20,360,130]
+        console.log(QuickSort(itens))
     </script>
 </body>
 </html>
