@@ -1,0 +1,116 @@
+#Criar tabela------------------------------------------------------------------------------------------
+
+        CREATE TABLE PATRICK_USUARIOS(
+            id NUMBER PRIMARY KEY,
+            cpf VARCHAR2(15) NOT NULL UNIQUE,
+            sexo VARCHAR2(1) NOT NULL,
+            nome VARCHAR2(4000) NOT NULL,
+            data_nascimento DATE,
+            tipo_sanguineo VARCHAR2(3) 
+        );
+
+
+#Comentar coluna------------------------------------------------------------------------------------------
+
+        COMMENT ON COLUMN PATRICK_USUARIOS.tipo_sanguineo
+        is 'coluna usada para saber o tipo sanguineo do paciente';
+
+        #inserir informações na coluna 
+
+        INSERT INTO PATRICK_USUARIOS (id, cpf, sexo, nome, data_nascimento, tipo_sanguineo)
+        VALUES (1,'165.856.789-13', 'M','Patrick', TO_DATE('01/04/2003', 'DD/MM/YYYY'), '+O');
+
+#contas tabelas------------------------------------------------------------------------------------------
+
+        SELECT CEIL(AVG(salario)) as preço_medio FROM PATRICK_FUNCIONARIOS;
+        SELECT SUM(SALARIO) as soma_salarios FROM PATRICK_nome_da_tabela, sobrenome
+        GROUP BY sobrenome;
+
+        SUM = soma
+        VAG = media
+        MIN = menor
+        MAX = maior
+        CEIL = arredonda para cima
+        FLOOR = arredonda para baixo
+
+#----------------------------------------------------------------------------------------------------------
+
+        select count(*) From PATRICK_nome_da_tabela;
+
+        select count(*) From PATRICK_nome_da_tabela WHERE cidade = 'SAO PAULO';
+
+        SELECT REPLACE (CPF, '-', '=') FROM PATRICK_nome_da_tabela;
+
+        SELECT SUBSTR(nome, 0, 4) FROM PATRICK_nome_da_tabela WHERE ID = 11
+
+        length = quantidade de caracteres
+
+#Alterar ou deletar registro ------------------------------------------------------------------------------------------
+
+        ###########################LEMBRAR SEMPRE DE COLOCAR O ID SE NAO ALTERA TUDO####################################
+        Update PATRICK_nome_da_tabela 
+        SET nome = 'cupincha'
+        WHERE ID = 1; 
+        ###########################LEMBRAR SEMPRE DE COLOCAR O ID SE NAO ALTERA TUDO####################################
+
+
+        UPDATE PATRICK_nome_da_tabela
+        SET nome = 'Jestosbaldo',	
+            tipo_sanguineo = '+A'
+        WHERE ID = 1;
+
+
+        DELETE FROM PATRICK_nome_da_tabela
+        WHERE tipo_sanguineo = 'A+';
+
+#Tabela estrangeira------------------------------------------------------------------------------------------
+
+        CREATE TABLE PATRICK_TELEFONES_USUARIOS(
+            id_telefone NUMBER PRIMARY KEY,
+            nr_telefone VARCHAR2(10) NOT NULL,
+            id_usuario NUMBER,
+
+            CONSTRAINT id_usuario_PATRICK_fk FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+        );
+
+#Join -----------------------------------------------------------------------------------------------------------
+
+        SELECT u.nome, t.nr_telefone
+        FROM PATRICK_USUARIOS u
+        INNER JOIN PATRICK_TELEFONES_USUARIOS t on t.id_usuario = u.id
+
+        1- SELECT
+            A.nome_cidade,
+            B.email_pessoa
+        FROM
+            patrick_cidades A
+        INNER JOIN patrick_pessoas B ON B.fk_id_cidade = A.cidade_id
+
+
+
+        6- SELECT MAX(idade) FROM (SELECT
+    A.nome_pessoa,
+    TRUNC((SYSDATE - A.data_nascimento) /365) AS idade,
+    B.nome_pais,
+    B.pais_id
+FROM 
+    PATRICK_PAISES B
+INNER JOIN PATRICK_ESTADOS C ON C.fk_id_pais = C.pais_id
+INNER JOIN PATRICK_CIDADES D ON D.fk_id_estado = D.estado_id
+INNER JOIN PATRICK_PESSOAS A ON A.fk_id_cidade = A.cidade_id 
+    WHERE
+    C.pais_id = 3
+    );
+#############  NAO FUNCIONA(VER DEPOIS) 
+
+
+
+
+SELECT 
+    nome,
+    cidade,
+    SUM(preço_produto) AS soma
+FROM 
+    PATRICK_CLIENTE,
+    PATRICK_PRODUTOS
+GROUP BY nome, cidade, preço_produto;
