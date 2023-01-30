@@ -1,0 +1,567 @@
+SITES: https://www.techonthenet.com/index.php
+
+
+
+DECLARE
+V_NOME VARCHAR2(1000) := 'PATRICK';
+V_IDADE NUMBER;
+
+BEGIN
+    
+    DBMS_OUTPUT.PUT_LINE('TESTE');
+
+
+END;
+
+##################################### TUDO DENTRO DO BEGIN ####################################################
+IF V_NOME = 'PATRICK'THEN
+        DBMS_OUTPUT.PUT_LINE('O nome é ' || V_NOME);
+        ELSIF V_NOME = ''THEN
+        DBMS_OUTPUT.PUT_LINE('O NOME ESTA VAZIO');
+        ELSE 
+        DBMS_OUTPUT.PUT_LINE('NAO SEI O NOME');
+            END IF;
+####################################### TUDO DENTRO DO BEGIN ##################################################
+select cpf
+    into V_CPF
+    from patrick_usuarios
+    where id = 1;
+    
+    DBMS_OUTPUT.PUT_LINE('O cpf encontrado foi: ' || V_CPF);
+
+######################################## TUDO DENTRO DO BEGIN #################################################
+FOR R IN (SELECT * FROM PATRICK_USUARIOS) LOOP
+    
+    SELECT 
+        CASE 
+            WHEN R.SEXO = 'M' THEN 'MASCULINO'
+            WHEN R.SEXO = 'F' THEN 'FEMININO'
+        ELSE 'NAO INFORMADO'
+    END
+    
+    INTO V_SEXO
+        FROM DUAL;
+        
+    dbms_output.put_line('O NOME DA VEZ É: ' || R.nome);
+    dbms_output.put_line('O SEXO DESSA PESSOA É: ' || R.sexo);
+    END LOOP;
+####################################################################################################
+    
+DECLARE
+    V_CONTAGEM NUMBER := 200;
+BEGIN
+    
+    FOR INDICE IN 1..V_CONTAGEM LOOP
+    
+    DBMS_OUTPUT.PUT_LINE(INDICE);
+    
+    END LOOP;
+    
+END; 
+
+###############################################################################################
+CREATE OR REPLACE PROCEDURE PATRICK_PROCEDURE(P_ID IN NUMBER)
+
+IS 
+
+V_SALARIO ADRI_FUNCIONARIOS.SALARIO%TYPE := 0;
+V_NOME ADRI_FUNCIONARIOS.PRIMEIRO_NOME%TYPE;
+
+
+BEGIN
+
+SELECT PRIMEIRO_NOME,salario
+into v_salario, v_nome
+from ADRI_FUNCIONARIOS
+WHERE ID = P_ID;
+
+  DBMS_OUTPUT.PUT_LINE(V_NOME);
+  DBMS_OUTPUT.PUT_LINE(V_SALARIO);
+
+
+END;
+
+############################################################################################################
+CREATE OR REPLACE PROCEDURE PATRICK_PROCEDURE(P_ID IN NUMBER)
+
+IS 
+
+V_SALARIO ADRI_FUNCIONARIOS.SALARIO%TYPE := 0;
+V_NOME ADRI_FUNCIONARIOS.PRIMEIRO_NOME%TYPE;
+
+
+BEGIN
+
+SELECT PRIMEIRO_NOME,salario
+into v_salario, v_nome
+from ADRI_FUNCIONARIOS
+WHERE ID = P_ID;
+
+IF V_SALARIO <= 2000 THEN
+    DBMS_OUTPUT.PUT_LINE('O SALARIO ERA ' || V_SALARIO);
+V_SALARIO := V_SALARIO * 1.1;
+
+    UPDATE ADRI_FUNCIONARIOS
+        SET SALARIO = V_SALARIO
+        WHERE ID = P_ID;
+        DBMS_OUTPUT.PUT_LINE('O NOVO SALARIO É: ' || V_SALARIO);
+    ELSE 
+        DBMS_OUTPUT.PUT_LINE('NAO É POSSIVEL AUMENTAR O SALARIO');
+END IF;
+END;
+
+
+################################################################################################
+CREATE OR REPLACE PROCEDURE patrick_aumento_procedure (
+    p_id IN NUMBER
+) IS
+    v_produto patrick_produtos.preço_produto%TYPE := 0;
+    v_nome    patrick_produtos.nome_produto%TYPE;
+BEGIN
+
+    SELECT nome_produto, preço_produto
+    INTO v_nome, v_produto
+    FROM patrick_produtos
+    WHERE id = p_id;
+
+    IF v_produto <= 2000 THEN
+        dbms_output.put_line('O PREÇO ERA ' || v_produto);
+        
+        UPDATE patrick_produtos
+        SET v_produto := v_produto * 1.1
+        WHERE id = p_id;
+
+        dbms_output.put_line('O NOVO PREÇO É: ' || v_produto);
+    ELSE
+        dbms_output.put_line('NAO É POSSIVEL AUMENTAR O PREÇO');
+    END IF;
+
+END;
+
+#######################################################################################################
+EXERCICIOS
+
+1- DECLARE 
+
+V_PAR NUMBER := 1;
+
+BEGIN
+
+ if mod (V_PAR,2) = 0 THEN 
+ DBMS_OUTPUT.PUT_LINE('O numero é par');
+ ELSE
+ DBMS_OUTPUT.PUT_LINE('O numero é impar'); 
+END IF;
+END;
+
+2-
+
+
+
+
+3-
+DECLARE
+
+V_N NUMBER := 24;
+contador NUMBER := 0;
+BEGIN
+
+FOR v_i IN 1..v_n LOOP
+if mod(v_n,v_i) = 0 THEN 
+contador := contador + 1;
+end if;
+end loop;
+
+if contador = 2 then
+dbms_output.put_line('é primo');
+else
+dbms_output.put_line('não é primo');
+end if;
+
+END;
+
+4-
+DECLARE
+
+NUM NUMBER := 6;
+V_F NUMBER := 1;
+TEMP NUMBER;
+BEGIN
+
+temp := num;
+
+while(temp > 0)
+loop 
+V_F := V_F * TEMP;
+TEMP := TEMP - 1;
+END LOOP;
+
+DBMS_OUTPUT.PUT_LINE('O fatorial de' || num || 'é' || V_F);
+
+END;
+
+
+5-
+
+
+6-
+DECLARE
+  VN CONSTANT NUMBER(2):=5;
+BEGIN
+    FOR i IN 1..10 LOOP
+       DBMS_OUTPUT.PUT_LINE(VN || ' X ' || i ||'='|| VN*i);
+    END LOOP;
+END;
+
+7-
+DECLARE  -->Vane ajudou
+
+V_produto patrick_produtos.id_produto%type; 
+v_MEDIA NUMBER := 0;
+
+BEGIN
+
+    FOR R IN (SELECT id_produto FROM PATRICK_PRODUTOS)
+    LOOP SELECT AVG(ID_PRODUTO)
+    INTO v_media
+    FROM PATRICK_PRODUTOS;
+END LOOP;
+DBMS_OUTPUT.PUT_LINE(V_media);
+END;
+
+
+8-DECLARE 
+
+V_produto patrick_produtos.id_produto%type; 
+v_maximo NUMBER := 0;
+
+BEGIN
+
+    FOR R IN(SELECT ID_PRODUTO FROM PATRICK_PRODUTOS)
+    LOOP SELECT MAX(ID_PRODUTO) 
+    INTO V_MAXIMO
+    FROM PATRICK_PRODUTOS;
+    END LOOP;
+DBMS_OUTPUT.PUT_LINE(V_MAXIMO);
+END;
+9-SO MUDAR O MAX PRA MIN NA QUESTAO 8.
+
+10- 
+DECLARE
+
+n_par NUMBER := 0;
+n_impar NUMBER := 0;
+BEGIN
+
+    FOR R IN(SELECT id_produto FROM patrick_produtos)
+    LOOP if mod(r.id_produto,2) != 0 THEN 
+    n_impar := n_impar + 1;
+    ELSE 
+    n_par := n_impar +1;
+    end if;
+    end loop;
+    
+dbms_output.put_line(n_par || n_impar);
+
+END;
+
+11-
+DECLARE
+
+soma_vogais NUMBER := 0;
+soma_consoantes NUMBER := 0;
+V_string VARCHAR2(100);
+letra_selecionada VARCHAR2(100);
+
+BEGIN
+
+SELECT NOME_PRODUTO INTO V_STRING FROM PATRICK_PRODUTOS WHERE ID_PRODUTO = 21;
+
+FOR I IN 1..length(v_string) LOOP letra_selecionada := SUBSTR(v_STRING, I,1);
+    IF letra_selecionada = 'A' OR letra_selecionada = 'E'OR letra_selecionada = 'I'OR letra_selecionada = 'O'OR letra_selecionada = 'U' THEN
+    soma_vogais := soma_vogais +1;
+    ELSE
+    soma_consoantes := soma_consoantes +1;
+    END IF;
+    END LOOP;
+    
+    dbms_output.put_line(soma_vogais || soma_consoantes);
+END;
+
+
+12- DECLARE
+
+ANO NUMBER := 1600;
+
+BEGIN
+
+IF MOD (ANO,4) = 0
+AND 
+MOD (ANO,100) != 0 
+OR
+MOD (ANO, 400)= 0 THEN
+DBMS_OUTPUT.PUT_LINE(ano || ' é um ano bissexto');
+ELSE
+DBMS_OUTPUT.PUT_LINE(ano || ' não é um ano bissexto');
+END IF;
+
+END;
+
+13-
+DECLARE
+
+A VARCHAR2(10) := 'Palindromo'; 
+B VARCHAR2(20); 
+C VARCHAR2(10); 
+    
+BEGIN
+FOR I IN REVERSE 1..LENGTH(A) LOOP B := SUBSTR(A,I, 1);
+
+C := C || '' || B;
+END LOOP;
+
+IF C = A THEN DBMS_OUTPUT.PUT_LINE(C || '' || ' É UM PALINDROMO'); 
+ELSE DBMS_OUTPUT.PUT_LINE(C || '' || ' NAO É UM PALINDROMO');
+END IF;
+
+
+END;
+########################################################################################
+CREATE OR REPLACE PROCEDURE PATRICK_PALINDROME (P_ID IN NUMBER)
+IS 
+V_NOME VARCHAR2(4000);
+V_REVERSE VARCHAR2(4000);
+
+BEGIN 
+SELECT NOME 
+INTO V_NOME
+FROM PATRICK_USUARIOS
+WHERE ID = P_ID;
+
+SELECT REVERSE(NOME)
+INTO V_REVERSE
+FROM PATRICK_USUARIOS
+WHERE ID = P_ID;
+
+IF V_NOME = V_REVERSE THEN 
+DBMS_OUTPUT.PUT_LINE('É uma palavra palindrome');
+Else
+DBMS_OUTPUT.PUT_LINE('Não é uma palavra palindrome');
+end if; 
+end;
+############################################################################
+
+14-
+
+CREATE OR REPLACE NONEDITIONABLE FUNCTION patrick_vogais RETURN NUMBER IS
+
+    v_palavra          VARCHAR2(4000) := 'NSEI';
+    v_vogal            NUMBER := 0;
+    v_letraselecionada VARCHAR2(4000);
+BEGIN
+    FOR i IN 1..length(v_palavra) LOOP
+        v_letraselecionada := substr(v_palavra, i, 1);
+        IF v_letraselecionada = 'A' OR v_letraselecionada = 'E' OR v_letraselecionada = 'I' OR v_letraselecionada = 'O' OR v_letraselecionada = 'U'
+        THEN
+            v_vogal := v_vogal + 1;
+        END IF;
+
+    END LOOP;
+
+    dbms_output.put_line(v_vogal);
+END;
+
+15-
+create or replace NONEDITIONABLE PROCEDURE PATRICK_MEDIA 
+IS 
+ID_PRODUTO PATRICK_PRODUTOS.PREÇO_PRODUTO%TYPE; 
+V_MEDIA NUMBER := 0;
+BEGIN
+
+FOR R IN(SELECT PREÇO_PRODUTO FROM PATRICK_PRODUTOS)
+LOOP SELECT AVG(PREÇO_PRODUTO)
+INTO V_MEDIA 
+FROM PATRICK_PRODUTOS;
+END LOOP;
+
+DBMS_OUTPUT.PUT_LINE(V_MEDIA);
+END;
+
+16-
+CREATE OR REPLACE PROCEDURE PATRICK_MAIOR_MENOR
+IS 
+
+id_produto patrick_produtos.ID_PRODUTO%TYPE;
+V_MAXIMO NUMBER := 0;
+V_MINIMO NUMBER := 0;
+
+BEGIN
+
+FOR R IN (SELECT ID_PRODUTO FROM PATRICK_PRODUTOS) 
+LOOP SELECT MAX(ID_PRODUTO)
+INTO V_MAXIMO 
+FROM PATRICK_PRODUTOS;
+
+SELECT MIN(ID_PRODUTO)
+INTO V_MINIMO
+FROM PATRICK_PRODUTOS;
+
+END LOOP;
+
+DBMS_OUTPUT.PUT_LINE(V_MAXIMO);
+DBMS_OUTPUT.PUT_LINE(V_MINIMO);
+
+END;
+
+17- 
+create or replace NONEDITIONABLE FUNCTION PATRICK_NUMEROS_PARES(
+V_NUM1 IN NUMBER,
+V_NUM2 IN NUMBER
+) RETURN NUMBER 
+IS
+V_SOMA NUMBER := 0;
+W_NUM1 NUMBER := V_NUM1;
+W_NUM2 NUMBER := V_NUM2;
+
+BEGIN
+
+FOR I IN W_NUM1..W_NUM2 LOOP
+IF MOD(I, 2) = 0 THEN
+V_SOMA := V_SOMA + I;
+END IF;
+END LOOP;
+dbms_output.put_line(v_soma);
+END;
+
+#########################################PACKAGE##############################################################
+create or replace NONEDITIONABLE PACKAGE PKG_PATRICK AS 
+
+FUNCTION SOMAR(P_N1 NUMBER, P_N2 NUMBER)RETURN NUMBER;
+FUNCTION SUBTRAIR(P_N1 NUMBER, P_N2 NUMBER)RETURN NUMBER;
+
+END PKG_PATRICK;
+
+
+
+
+create or replace NONEDITIONABLE PACKAGE BODY PKG_PATRICK AS 
+
+FUNCTION SOMAR(P_N1 NUMBER, P_N2 NUMBER)RETURN NUMBER IS
+BEGIN 
+    RETURN P_N1 + P_N2;
+END SOMAR;
+
+FUNCTION SUBTRAIR(P_N1 NUMBER, P_N2 NUMBER)RETURN NUMBER IS
+BEGIN 
+    RETURN P_N1 - P_N2;
+END SUBTRAIR;
+
+END PKG_PATRICK;
+
+
+
+
+
+DECLARE
+
+V_RESULTADO NUMBER;
+
+BEGIN
+
+V_RESULTADO := PKG_PATRICK.somar(1,2);
+
+DBMS_OUTPUT.PUT_LINE(V_RESULTADO);
+END;
+
+
+
+
+
+CREATE OR REPLACE TRIGGER PATRICK_TRIGGER_FUNCIONARIO   
+BEFORE INSERT ON PATRICK_CIDADES
+FOR EACH ROW
+
+DECLARE
+
+
+BEGIN
+
+INSERT INTO PATICK_CIDADES(CIDADE_ID, NOME_CIDADE, FK_ID_ESTADO)
+VALUES (1,'Teresopolis',1) 
+
+-- :OLD
+-- :NEW
+
+END;
+
+(1,'Teresopolis',1) 
+
+UPDATE PATRICK_CIDADES SET FK_ID_ESTADO = 2
+
+
+
+IF :NEW.NOME_CIDADE = 'Clevelandia' THEN 
+    :NEW.NOME_CIDADE := 'TROCADO';
+    END IF;
+
+
+
+EXERCICIOS TRIGGER #####################################################################################
+
+
+1-
+create or replace NONEDITIONABLE TRIGGER patrick_cidades_automatico AFTER
+    INSERT ON patrick_cidades
+    FOR EACH ROW
+BEGIN
+    UPDATE patrick_cidades
+    SET
+        data_automatico = sysdate;
+
+END;
+
+
+2- 
+CREATE OR REPLACE TRIGGER patrick_impedir_tabela BEFORE
+    INSERT OR UPDATE ON patrick_cidades
+    FOR EACH ROW
+BEGIN
+    FOR r IN (
+        SELECT
+            nome_cidade
+        FROM
+            patrick_cidades
+    ) LOOP
+        IF r.nome_cidade = :new.nome_cidade THEN
+            raise_application_error(-20001, 'Cidade ja existe na coluna');     --http://www.linhadecodigo.com.br/artigo/2821/trigger-oracle-basico.aspx
+        END IF;
+    END LOOP;
+END;
+
+
+3- 
+
+create or replace NONEDITIONABLE PACKAGE PKG_PATRICK_RETORNAR_CIDADE AS 
+FUNCTION MOSTRAR_CIDADES(ID_INFORMADO NUMBER) RETURN VARCHAR2;
+
+END PKG_PATRICK_RETORNAR_CIDADE;
+
+CREATE OR REPLACE PACKAGE BODY pkg_patrick_retornar_cidade AS
+
+    FUNCTION mostrar_cidades (
+        id_informado NUMBER
+    ) RETURN VARCHAR2 IS
+        w_nome_cidade VARCHAR2(4000);
+    BEGIN
+        SELECT
+            nome_cidade
+        INTO w_nome_cidade
+        FROM
+            patrick_cidades
+        WHERE
+            fk_id_estado = id_informado;
+
+        RETURN w_nome_cidade;
+    END mostrar_cidades;
+
+END pkg_patrick_retornar_cidade;
