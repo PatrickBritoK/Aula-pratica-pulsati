@@ -7,8 +7,24 @@ const canvasHeigth = 576
 canvas.width = canvasWidth
 canvas.height = canvasHeigth
 
-ctx.fillRect(0, 0, canvasWidth, canvasHeigth)
+let prevTime = 0
+
+animate()
 
 function animate() {
     window.requestAnimationFrame(animate)
+
+    handleControl()
+
+    ctx.fillStyle = "black"
+    ctx.fillRect(0, 0, canvasWidth, canvasHeigth)
+
+    player.update()
+    player2.update()
+
+    let delta = (performance.now() - prevTime) / 1000
+    let fps = 1 / delta 
+
+    prevTime = performance.now()
+    //console.log(`FPS ${fps}`)
 }

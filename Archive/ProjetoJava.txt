@@ -1,0 +1,245 @@
+
+package com.mycompany.exercicio1;
+
+
+public class Exercicio1 {
+
+    public static void main(String[] args) {
+        pessoa objeto1 = new pessoa();
+        objeto1.Nome = "Patrick";
+        objeto1.idade = 19;
+        objeto1.peso = 80;
+        objeto1.sexo = 'M';
+        objeto1.imprimePessoa();
+                
+    }
+}
+
+############################################################################
+
+package com.mycompany.exercicio1;
+
+public class pessoa {
+    int idade;
+    int peso;
+    String Nome;
+    char sexo;
+    
+    public void imprimePessoa(){
+        System.out.println(Nome+" tem "+idade+" anos, peso : "+peso+ ",sexo: "+sexo);
+    }
+}
+################################################################
+
+exercicio2 
+
+package com.mycompany.exercicio2;
+
+
+public class Exercicio2 {
+
+    public static void main(String[] args) {
+      computador objeto1 = new computador();
+      objeto1.memoria = 16;
+      objeto1.processador = "Intel";
+      objeto1.imprimeComputador();
+      
+    }
+}
+
+
+
+package com.mycompany.exercicio2;
+
+public class computador {
+    int memoria;
+    String processador; 
+    
+    public void imprimeComputador(){
+        System.out.println("O computador tem: "+memoria+" de memoria e um processador: "+processador);
+    }
+    
+}
+##################################################################################################
+EXERCICIO 3
+
+package com.mycompany.exercicio3;
+
+
+public class Exercicio3 {
+
+    public static void main(String[] args) {
+        aluno objeto1 = new aluno();
+        objeto1.nota = 3.5;
+        objeto1.nome = "joao";
+        objeto1.imprimeNota();
+        
+    }
+}
+
+package com.mycompany.exercicio3;
+
+public class aluno {
+    double nota;
+    String nome;
+    
+    public void imprimeNota(){
+        System.out.println(nome+" tirou a nota "+nota);
+    }
+}
+
+################################################################################################
+EXERICIO 4
+
+package com.mycompany.exercicio4;
+
+public class Exercicio4 {
+
+    public static void main(String[] args) {
+        casa objeto1 = new casa();
+        objeto1.cor = "Azul";
+        objeto1.metrosQuadrados = 15;
+        objeto1.imprimeCasa();
+    }
+}
+
+package com.mycompany.exercicio4;
+
+public class casa {
+    int metrosQuadrados;
+    String cor;
+    
+    public void imprimeCasa(){
+        System.out.println("A casa "+cor+ " tem "+metrosQuadrados+" metros quadrados");
+    }
+}
+###############################################################################################
+Exercicio 5
+package com.mycompany.exericio5;
+
+public class Exericio5 {
+
+    public static void main(String[] args) {
+        carro objeto1 = new carro();
+        objeto1.litrosTanque = 56;
+        objeto1.montadora = "Ferrari";
+        objeto1.imprimeCarro();
+        
+    }
+}
+
+package com.mycompany.exericio5;
+
+
+public class carro {
+    int litrosTanque;
+    String montadora;
+    
+    public void imprimeCarro(){
+        System.out.println("O carro da "+montadora+" tem "+litrosTanque+" litros de gasolina");
+    }
+}
+##################################################################################################
+Exercicio 6
+package com.mycompany.exercicio6;
+
+public class Exercicio6 {
+
+    public static void main(String[] args) {
+        professor objeto1 = new professor();
+        objeto1.nome = "Neusa";
+        objeto1.curso = "Analise e desenvolvimento de sistemas";
+        objeto1.imprimeProfessor();
+    }
+}
+package com.mycompany.exercicio6;
+
+public class professor {
+    String nome;
+    String curso;
+    
+    public void imprimeProfessor(){
+        System.out.println("O professor(a) "+nome+" leociona o curso de: "+curso);
+    }
+}
+
+######################################################################################################
+Exercicio Herança orientação a objeto 
+
+package com.mycompany.exercicioanimal;
+
+public class ExercicioAnimal {
+    public static void imprimeMensagem(animal a){
+        System.out.println("Qual é a raça do animal? "+a.getRaça());
+    }
+    public static void imprimeMensagem2(animal a){
+        System.out.println("O animal caminha? "+a.getCaminha());
+    }
+    
+    public static void main(String[] args) {
+        gato objetoGato = new gato();
+        cachorro objetoCachorro = new cachorro();
+        
+        objetoGato.setRaça("Laranja");
+        imprimeMensagem(objetoGato);
+        
+        objetoCachorro.setCaminha("sim");
+        imprimeMensagem2(objetoCachorro);
+    }
+}
+
+public class animal {
+    private String raça;
+    private String caminha;
+    private String nome;
+
+    public String getRaça() {
+        return raça;
+    }
+
+    public void setRaça(String raça) {
+        this.raça = raça;
+    }
+
+    public String getCaminha() {
+        return caminha;
+    }
+
+    public void setCaminha(String caminha) {
+        this.caminha = caminha;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+
+
+public class cachorro extends animal {
+    private String late;
+
+    public String getLate() {
+        return late;
+    }
+
+    public void setLate(String late) {
+        this.late = late;
+    }
+}
+
+public class gato extends animal{
+    private String mia;
+
+    public String getMia() {
+        return mia;
+    }
+
+    public void setMia(String mia) {
+        this.mia = mia;
+    }
+}
+
