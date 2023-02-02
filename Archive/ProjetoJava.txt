@@ -242,4 +242,29 @@ public class gato extends animal{
         this.mia = mia;
     }
 }
+##########################################################################################
+Exemplo sem static
+      
+        String texto = "OlA SeJa BeM vINdO";
+        utilitario objUtilitario = new utilitario();
+        texto = objUtilitario.deixaMaisculo(texto);
+        System.out.println(texto);
+        texto = objUtilitario.deixaMinusculo(texto);
+        
+##############################################################################################
+Exemplo com static
 
+
+    public static String deixaMaisculo(String texto){
+        return texto.toUpperCase();
+
+ String texto = "OlA SeJa BeM vINdO";
+        texto = utilitario.deixaMaisculo(texto);
+        System.out.println(texto);
+        
+###############################################################################################]
+Modelo de 3 entidades
+
+DAO(DATA ACESS OBJECT) objeto de acesso a dados
+DTO(DATA TRANSFER OBJECT) objeto para tranferencia de dados
+VIEW(tela) pode ser javaFX ou JavaSwing
