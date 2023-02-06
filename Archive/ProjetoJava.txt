@@ -268,3 +268,11 @@ Modelo de 3 entidades
 DAO(DATA ACESS OBJECT) objeto de acesso a dados
 DTO(DATA TRANSFER OBJECT) objeto para tranferencia de dados
 VIEW(tela) pode ser javaFX ou JavaSwing
+
+
+
+##########################################################
+spring.datasource.url=jdbc:oracle:thin:@192.168.0.50:1521:xe
+spring.datasource.username=SYSTEM
+spring.datasource.password=pulsati2023
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
