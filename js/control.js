@@ -46,12 +46,13 @@ window.addEventListener("keyup", e => {
         case "ArrowLeft":
         case "a":
             Keys.a.pressed = false
-            player.lastKeyPressed = Keys 
+            player.lastKeyPressed = key
             break
 
         case "ArrowRigth":
         case "d":
             Keys.d.pressed = false
+            player.lastKeyPressed = key
             break
 
         case "ArrowUp":
@@ -66,16 +67,16 @@ function handleControl(){
     function movement(){
         player.velocity.x = 0
 
-        if (Keys.a.pressed && ["a", "ArrowLeft"].includes(player.player.lastKeyPressed)){
+        if (Keys.a.pressed && ["a", "ArrowLeft"].includes(player.lastKeyPressed)){
             player.velocity.x = -1.5 * 3.4
         }
 
-        if (Keys.d.pressed){
+        if (Keys.d.pressed && ["d", "ArrowRight"].includes(player.lastKeyPressed)){
             player.velocity.x = 1.5 * 3.4
         }
 
         if (Keys.w.pressed){
-            player.velocity.y = -16
+            player.velocity.y = -7
         }
     }
 }

@@ -17,7 +17,8 @@ class Sprite {
         update(){
     
             if (this.position.y+this.height >= canvas.height){
-                this.velocity.y = canvasHeigth - (this.position.y+this.height)
+                this.velocity.y = canvas.heigth-this.height
+                this.velocity.y = 0 
             }else {
                 this.velocity.y += gravity
             }
@@ -45,6 +46,8 @@ class Fighter extends Sprite {
         this.height = dimensions.height
 
         this.lastKeyPressed
+
+        this.onGround
     }
     
 }
