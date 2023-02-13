@@ -1,0 +1,3 @@
+function checar_palindromo(){
+    
+}
