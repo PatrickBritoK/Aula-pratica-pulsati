@@ -1,12 +1,9 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const http = require('http');
 
-readline.question('Digite uma palavra', palavra =>{
-  if (new Set(palavra).size > 1)
-  console.log("As letras não são iguais")
-else 
-  console.log("As letras são iguais")
-  readline.close();
-})
+http.createServer((req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'application/json'
+  });
+  res.end(JSON.stringify({ data: 'Hello World!' }));
+
+}).listen(8000, () => console.log('Servidor inicializado na porta 8000'));

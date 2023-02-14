@@ -14,7 +14,7 @@ const readline1 = require('readline').createInterface(
     readline1.question('Informe o juros: ', num2 => {
     let porcentagem = num2 /100;
     let juros = num1 * num2;
-    console.log(`O valor ${num1} com juros de ${num2}% ao mês fica no valor de ${juros}`)
+    console.log(`O valor ${num1} com juros de ${num2}% ao mês fica no valor de ${juros}`)  //Só não consigo colocar virgula no meio da conta final.
       readline1.close();
   })
   });
