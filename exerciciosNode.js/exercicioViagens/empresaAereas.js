@@ -1,0 +1,4 @@
+class empresasAereas {
+    nome;
+    sede;
+}

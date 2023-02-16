@@ -1,15 +1,17 @@
 class aeroporto {
-   nome;
    codigo;
+   nome;
+   codigoAeroporto;
    endereco;
    
-   constructor(nome, codigo, endereco){
+   constructor(codigo,nome, codigoAeroporto, endereco){ 
+      this.codigo = codigo;
     this.nome = nome;
-    this.codigo = codigo;
+    this.codigoAeroporto = codigoAeroporto;
     this.endereco = endereco;
    }
    getAeroporto(){
-    return `${this.nome} ${this.codigo} ${this.endereco}`
+    return `${this.nome} ${this.codigoAeroporto} ${this.endereco}`
    }
 }
 exports.aeroporto = aeroporto;
