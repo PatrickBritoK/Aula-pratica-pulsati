@@ -33,6 +33,7 @@ Aeroporto.init(
 );
 sequelize.sync();
 
+const { salvarArquivo, lerArquivo, deletarArquivo } = require("./arquivo");
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -47,6 +48,7 @@ app.post("/aeroporto", async (req, res) => {
   const aeroporto = new Aeroporto();
   aeroporto.nome = nome;
   aeroporto.endereco = endereco;
+  salvarArquivo(`${aeroporto.codigo}.json`,JSON.stringify(aeroporto)) //procurar um jeito melhor de fazer.
   await aeroporto.save();
   res.json(aeroporto);
 });
