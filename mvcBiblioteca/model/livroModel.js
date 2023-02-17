@@ -18,7 +18,7 @@ Livro.init(
       allowNull: false,
     },
     lancamento: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
   },

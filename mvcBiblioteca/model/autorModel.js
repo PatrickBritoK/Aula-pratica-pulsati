@@ -17,8 +17,7 @@ Autor.init({
     allowNull: false,
   },
   dataNascimento: {
-    type: DataTypes.DATE,
-    allowNull: false,
+    type: DataTypes.DATEONLY
   }
 },{
     sequelize: dbConfig(),
