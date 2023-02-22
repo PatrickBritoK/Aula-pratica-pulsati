@@ -39,3 +39,5 @@ exports.deleteSessao = async (req, res) => {
   await sessao.destroy();
   res.json({ Data: ">>>>>Deletado<<<<<" });
 };
+
+

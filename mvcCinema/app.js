@@ -1,8 +1,8 @@
 const { createSala, getSala, getSalaId, updateSala, deleteSala} = require("./controller/salaController");
-const { createSessao, getSessao, getSessaoId, updateSessao, deleteSessao } = require("./controller/sessaoController");
+const { createSessao, getSessao, getSessaoId, updateSessao, deleteSessao, getFaturamento } = require("./controller/sessaoController");
 const { createIngresso, getIngresso, getIngressoId, updateIngresso, deleteIngresso } = require("./controller/ingressoController");
 const { emitir } = require("./controller/emissaoController");
-const { createFilme, getFilme, getFilmeId, updateFilme, deleteFilme } = require
+const { createFilme, getFilme, getFilmeId, updateFilme, deleteFilme } = require("./controller/filmeController")
 
 
 const express = require('express');
@@ -15,11 +15,14 @@ app.get("/sala/:id", getSalaId);
 app.put("/sala/:id", updateSala);
 app.delete("/sala/:id", deleteSala);
 
+
 app.post("/sessao", createSessao);
 app.get("/sessao", getSessao);
 app.get("/sessao/:id", getSessaoId);
 app.put("/sessao/:id", updateSessao);
 app.delete("/sessao/:id", deleteSessao);
+app.get("/faturamento", getFaturamento); //comentario para verificar mais tarde caso de erro.
+
 
 app.post("/ingresso", createIngresso);
 app.get("/ingresso", getIngresso);
@@ -27,7 +30,9 @@ app.get("/ingresso/:id", getIngressoId);
 app.put("/ingresso/:id", updateIngresso);
 app.delete("/ingresso/:id", deleteIngresso);
 
+
 app.put("/emitirIngresso/:idEmissao", emitir);
+
 
 app.post("/filme", createFilme);
 app.get("/filme", getFilme);
