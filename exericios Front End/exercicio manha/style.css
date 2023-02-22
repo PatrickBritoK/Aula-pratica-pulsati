@@ -1,0 +1,100 @@
+.botao1{
+    width: 300px;
+    height: 100px;
+    font-size: 85px;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    border-radius: 20px 5%;
+    cursor: pointer;
+}
+button:hover {
+    background-color: antiquewhite;
+    color: black;
+}
+.Texto {
+    margin-top: 1%;
+    color: crimson;
+    border-radius: 5%;
+}
+
+.sombra {
+    font-size: 20px;
+    color: blue;
+    text-shadow: #000 2px 3px 2px;
+}
+
+.rodar {
+    transform:rotate(45deg)
+}
+
+img {
+    margin-right: 50%;
+}
+.aumentar {
+    transition: 500ms linear; 
+    transition-duration: 3s;
+}
+.aumentar:hover {
+    transition-duration: 3s;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 500ms linear; 
+    transition-duration: 3s;
+    
+}
+
+.quadrado {
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    color: blueviolet;
+}
+.quadrado:hover {
+    transition-duration: 3s;
+    opacity: 0;
+}
+
+.sombraE {
+    font-size: 20px;
+    color: chartreuse;
+    text-shadow: #000 -5px 3px 2px;
+}
+
+.TesteCor {
+    margin-left: 10%;
+    color: blue;
+    font-family: sans-serif;
+    font-size: 50px;
+    transition: 500ms linear; 
+    transition-duration: 3s;
+    transform:rotate(0);
+}
+
+.TesteCor:hover {
+    color: red;
+    /*transition: 500ms linear; 
+    transition-duration: 3s;
+    transform:rotate(0);*/
+    cursor: pointer;
+    animation: spinner .6s linear infinite;
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+
+
+.texto2 {
+    height: 30px;
+    width: 200px;
+    background-color: rgb(95, 158, 1);
+    color: black;
+}
+.texto2:valid {
+    transition: 1s;
+    color: white;
+    background-color:red;
+}

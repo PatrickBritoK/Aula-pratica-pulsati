@@ -1,0 +1,20 @@
+p:nth-child(2) {
+    display: inline-block;
+}
+
+.caixa {
+    max-width: 700px;
+    background-color: rgb(148, 102, 190);
+    display: flex;
+
+    /* sao obrigatorias do display flex  */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.caixa img {
+    border-radius: 50%;
+    width: 100px;
+}
