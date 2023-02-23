@@ -1,0 +1,11 @@
+div {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    left: 0;
+    top: 500px;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    line-height: 50px;
+}

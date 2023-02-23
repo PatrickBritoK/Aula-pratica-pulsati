@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: max-content;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 30pt;
+}
+
+.box {
+    border: 1px solid rgb(183, 173, 173);
+    max-height: 75px;
+    max-width: 1600px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box2 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #E6E6E6;
+    max-width: 1600px;
+    height: 700px;
+    
+}
+.box4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 115px;
+
+}
+
+div i {
+    font-size: 25px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.titulo {
+    font-size: 50pt;
+    font-family: sans-serif;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.imagemDev {
+    max-height: 652px;
+    padding-right: 40px;
+    padding-top: 60px;
+    border-radius: 60px;
+}
+.box2 p, .box2 span {
+    font-size: 28px;
+    padding-top: 380px;
+}
+
+.conta {
+    display: flex;
+    height: 30px;
+    width: 150px;
+    margin-top: 17px;
+    text-align: center;
+    font-size: 10pt;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #0AC5D4;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 9pt;
+
+}
+
+.logo {
+    display: flex; 
+    height: 50px;
+    padding-right: 1150px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+.carreira {
+    font-family: sans-serif;
+    display: flex;
+    padding-left: 200px;
+    margin-top: -27px;
+    color: grey;
+}
+.sucesso {
+    font-family: sans-serif;
+    display: flex;
+    padding-left: 300px;
+    margin-top: -18px;
+    color: grey;
+}
+
+.metodo {
+    font-size: 20pt;
+    font-family: sans-serif;
+    padding-top: 30px;
+    display: flex;
+    letter-spacing: 6px;
+    cursor: pointer;
+    padding-right: 390px;
+}
+
+.texto {
+    margin-top: -355px;
+    color: rgb(86, 85, 85);
+    font-family: sans-serif;
+    padding-right: 40px;
+}
+.texto span {
+    font-weight: bold;
+}
+.project {
+    margin-top: -355px;
+    color: rgb(86, 85, 85);
+    font-family: sans-serif;
+    padding-right: 40px;
+}
+.estude {
+    margin-top: -355px;
+    color: rgb(86, 85, 85);
+    font-family: sans-serif;
+    padding-right: 40px;
+}
+
+.botao1 {
+    display: flex;
+    gap: 30px;
+    padding-top: 80px;
+    padding-right: 200px;
+    font-family: sans-serif;
+}
+.botaoConta {
+    width: 180px;
+    height: 60px;
+    background-color: #253a44;
+    border: 2px solid #253a44;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 15pt;
+}
+
+.botaoMatri {
+    width: 150px;
+    height: 60px;
+    background-color: #253a44;
+    border: 2px solid #253a44;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 15pt;
+
+}
+.botaoConta:hover {
+    background-color: white;
+    color: #253A44;
+}
+
+.botaoMatri:hover {
+    background-color: white;
+    color: #253A44;
+}
+

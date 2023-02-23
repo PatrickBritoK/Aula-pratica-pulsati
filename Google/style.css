@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pesquisar {
+    width: 500px;
+    height: 45px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    line-height: 50px;
+    background-color: rgb(247, 242, 242);
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 330px;
+    font-family: sans-serif;
+}
+
+.pesquise {
+    text-align: center;
+    margin-left: 30px;
+    margin-top: -3px;
+}
+.lupa {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.teclado {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.microfone {
+    margin-left: 25px;
+    margin-top: 8px;
+}
+.camera {
+    margin-left: 25px;
+    margin-top: 7px;
+}
+input {
+    height: 40px;
+    width: 501px;
+    border: 1px solid;
+    border-radius: 50px;
+}
+.logoG img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin-top: 200px;
+    margin-left: 650px;
+    position: absolute;
+    display: flex;
+}
+.login {
+    background-color: rgb(90, 141, 230);
+    color: white;
+    margin-top: 20px;
+    margin-left: 1470px;
+    height: 40px;
+    width: 120px;
+    border: 1.2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icone {
+    max-width: 25px;
+    max-width: 25px;
+    width: auto;
+    width: auto;
+    position: absolute;
+    margin-top: 26px;
+    margin-left: -162px;
+}
+.Imagens {
+    margin-left: 1350px;
+    position: absolute;
+    margin-left: -230px;
+    margin-top: 27px;
+    text-decoration: none;
+}
+.Gmail {
+    margin-left: 1350px;
+    position: absolute;
+    margin-left: -290px;
+    margin-top: 27px;
+    text-decoration: none;
+}
+.Sorte {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 830px; 
+    width: auto;
+    height: auto;
+    border: 2px;
+    max-width: 85px;
+    max-height: 45px;
+    border: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+.Pequisa {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 675px; 
+    width: auto;
+    height: auto;
+    max-width: 85px;
+    max-height: 45px;
+    border: none;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
