@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500,700|Roboto:400,500|Montserrat:300,400,500,600,200,700|Poppins:200,300,400,500,600,700|Inter:200,300,400,500,600,700");
+
+* {
+  font-family: "Montserrat";
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: max-content;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  height: 75px;
+  color: grey;
+  overflow: hidden;
+}
+
+.logo {
+  border: 1px solid rgb(232, 232, 232);
+  width: max-content;
+}
+.logo img {
+  cursor: pointer;
+  margin: 20px;
+  width: 130px;
+  height: 30px;
+}
+
+.cabecalho {
+  border: 1px solid rgb(232, 232, 232);
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu_esquerda {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  gap: 25px;
+  margin-left: 25px;
+}
+.menus {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu_direita {
+  margin: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 245px;
+}
+.menu_direita button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 35px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(48, 199, 204);
+}
+.menu_direita button:hover {
+  background-color: rgb(58, 157, 134);
+}
+.menu_direita i {
+  cursor: pointer;
+  font-size: 2rem;
+}
+.lupa {
+    color: inherit;
+}
+
+.main {
+  margin-left: 95px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main label {
+  font-weight: 600;
+
+  font-size: 2.6rem;
+  display: flex;
+  padding-top: 35px;
+}
+.main h1 {
+  font-weight: 600;
+  text-align: left;
+  font-size: 6.5rem;
+  display: flex;
+}
+
+.texto {
+  font-size: 2.7rem;
+  font-weight: 400;
+  padding-top: 15px;
+}
+.texto span {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+.textodiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+.botoes2 {
+  display: flex;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.main button {
+  cursor: pointer;
+  padding: 20px;
+  width: auto;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(19, 57, 59);
+}
+
+.main button:hover {
+  color: rgb(19, 57, 59);
+  background-color: white;
+  border: 1px solid rgb(19, 57, 59);
+}
+
+.meio {
+  background-color: rgb(233, 232, 232);
+  display: flex;
+  justify-content: space-around;
+}
+
+.Imagemdev {
+  width: 1000px;
+  height: 600px;
+  margin-top: 5rem;
+}
+
+.rodape {
+    background-color: rgb(233, 232, 232);
+}
+
+
+@media screen and (max-width: 750px) {
+  .Imagemdev {
+    width: 0px;
+    height: 0px;
+  }
+  .eqpdev {
+    width: 446px;
+    height: 295px;
+  }
+  .main button {
+    visibility: hidden;
+  }
+  html {
+    font-size: 35%;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+  .Imagemdev {
+    width: 600px;
+    height: 450px;
+  }
+  header a {
+    visibility: hidden;
+  }
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1400px) {
+  .Imagemdev {
+    width: 900px;
+    height: 600px;
+  }
+  html {
+    font-size: 50%;
+  }
+}

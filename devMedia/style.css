@@ -5,9 +5,22 @@
     height: max-content;
 }
 
+html {
+    font-size: 62.5%; /* 1rem = 10px*/
+    overflow: hidden;
+ }
+ body{
+    width: 100vw;
+    min-height: 100vh;
+ }
 h1 {
+    transform: translate(-140%);
+    /* display: flex; */
+    /* justify-content: flex-start; */
     font-family: sans-serif;
-    font-size: 30pt;
+    font-size: 20pt;
+    max-width: 30rem;
+    background-color: red;
 }
 
 .box {
@@ -28,11 +41,15 @@ h1 {
     
 }
 .box4 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 115px;
-
+    /* transform: translate(-50%);     */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    position: relative;
+    /* max-width: 5rem; */
+    /* margin-left: 5rem; */
+    right: 50rem;
+    flex-wrap: wrap;
+    text-align: start;
 }
 
 div i {
@@ -46,15 +63,18 @@ div i {
 .titulo {
     font-size: 50pt;
     font-family: sans-serif;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 }
 .imagemDev {
-    max-height: 652px;
-    padding-right: 40px;
-    padding-top: 60px;
+    max-height: 65rem;
+    padding-right: 0%;
+    padding-top: 3%;
     border-radius: 60px;
+    position: absolute;
+    transform: translate(62%, -65%);
 }
 .box2 p, .box2 span {
     font-size: 28px;
@@ -89,6 +109,7 @@ div i {
 .carreira {
     font-family: sans-serif;
     display: flex;
+    justify-content: flex-start;
     padding-left: 200px;
     margin-top: -27px;
     color: grey;
@@ -107,8 +128,9 @@ div i {
     padding-top: 30px;
     display: flex;
     letter-spacing: 6px;
-    cursor: pointer;
-    padding-right: 390px;
+    flex-direction: column;
+    transform: translate(-72%);
+        
 }
 
 .texto {
@@ -116,29 +138,44 @@ div i {
     color: rgb(86, 85, 85);
     font-family: sans-serif;
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translate(-70%);
+
 }
 .texto span {
     font-weight: bold;
 }
 .project {
-    margin-top: -355px;
+    margin-top: -800px;
     color: rgb(86, 85, 85);
     font-family: sans-serif;
     padding-right: 40px;
+    display: flex;
+    /* flex-direction: column; */
+    transform: translate(-70%);
+
 }
 .estude {
     margin-top: -355px;
     color: rgb(86, 85, 85);
     font-family: sans-serif;
     padding-right: 40px;
+    display: flex;
+    /* flex-direction: column; */
+    transform: translate(-70%);
+
+
 }
 
 .botao1 {
     display: flex;
     gap: 30px;
     padding-top: 80px;
-    padding-right: 200px;
+    /* padding-right: 200px; */
     font-family: sans-serif;
+    transform: translate(-70%);
 }
 .botaoConta {
     width: 180px;
@@ -171,4 +208,30 @@ div i {
     background-color: white;
     color: #253A44;
 }
+@media screen and (max-width:1200px){
+    .imagemDev {
+    max-height: 60rem;
+    padding-right: 0%;
+    padding-top: 10%;
+    border-radius: 10px;
+    }
+    .box {
+        border: 1px solid rgb(183, 173, 173);
+        max-height: 50px;
+        max-width: 1400px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+}
+@media screen and (max-width:900px){
+    .imagemDev {
+    max-height: 40rem;
+    padding-right: 0%;
+    padding-top: 10%;
+    border-radius: 10px;
+    }
+}
+
 
