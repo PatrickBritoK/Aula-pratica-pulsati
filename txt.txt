@@ -1,0 +1,68 @@
+.box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35rem;
+  height: 35rem;
+  background-color: #1f1e25;
+  border-radius: 2rem;
+  border: 1px solid #706868;
+  background: linear-gradient(16deg, rgba(11,11,11,1) 33%, rgba(29,29,29,1) 52%, rgba(54,53,53,1) 82%, rgba(87,86,84,1) 98%);}
+
+.p2 {
+  color: #706868;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.p2 span {
+  display: flex;
+  margin-right: 20rem;
+  color: white;
+}
+
+.imgcss{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  margin-left: 15rem;
+}
+
+.p2Box2 {
+  color: #706868;
+  font-size: 1.2rem;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.box2 button {
+  background-color: red;
+  display: end;
+  align-items: end;
+  justify-content: flex-end;
+  text-align: center;
+  margin-left: 27rem;
+  margin-bottom: 1.8rem;
+  border: none;
+  border: 1px solid #706868;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  cursor: pointer;
+}
