@@ -13,6 +13,7 @@ html {
   position: relative;
   z-index: 0;
   width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -131,14 +132,15 @@ main {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  margin-top: 30rem;
 }
 
-.transparente {
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100vw;
-  height: 100vh;
-}
+/* .transparente { */
+  /* z-index: 1; */
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* width: max-content; */
+  /* height: max-content; */
+/* } */
 
 .textoMain {
   z-index: 2;
@@ -217,6 +219,7 @@ span {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  gap: 3rem;
 }
 
 .box1 {
@@ -551,7 +554,7 @@ span {
     background-image: url(Assets/fundo.jpg);
     /* background-size: cover; */
     background-position: center;
-    
+
     height: 155rem;
     width: 10rem;
   }
@@ -559,9 +562,9 @@ span {
     overflow: scroll;
   }
   .transparente {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100rem;
-    
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* width: 100vw; */
+    /* min-height: 100vh; */
   }
 
   .nav {
@@ -631,5 +634,4 @@ span {
     position: relative;
     left: 5rem;
   }
-  
 }
