@@ -1,0 +1,1 @@
+// n consegui fazer com js separado, dava erro.

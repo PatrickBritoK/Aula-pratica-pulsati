@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Helvetica, Arial, sans-serif
 }
 
 html {
@@ -14,10 +14,18 @@ html {
   z-index: 0;
   width: 100vw;
   height: 100vh;
+  
+}
+
+main{
+  width: 100vw;
+  min-height: 100vh;
 }
 
 body {
   overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 header {
@@ -132,15 +140,15 @@ main {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  padding-bottom: 10rem;
+  /* padding-bottom: 10rem; */
 }
 
-/* .transparente { */
-  /* z-index: 1; */
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  /* width: max-content; */
-  /* height: max-content; */
-/* } */
+.transparente { 
+   z-index: 0; 
+   background-color: rgba(0, 0, 0, 0.7); 
+   width: 100%; 
+   height: 100%; 
+ }
 
 .textoMain {
   z-index: 2;
@@ -152,6 +160,7 @@ main {
   flex-direction: column;
   font-family: Helvetica, Arial, sans-serif;
   padding: 5rem;
+  margin-top: 10rem;
 }
 
 h1 {
@@ -219,10 +228,11 @@ span {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  gap: 3rem;
+
 }
 
 .box1 {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +294,9 @@ span {
   margin-left: 15rem;
 }
 
-.html .p1Box1 {
+.p1Box1 {
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #706868;
   font-size: 1.2rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -395,6 +407,8 @@ span {
 }
 
 .p2Box2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #706868;
   font-size: 1.2rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -446,7 +460,6 @@ span {
   flex-direction: column;
   width: 35rem;
   height: 35rem;
-  /* background-color: #1f1e25; */
   border-radius: 2rem;
   border: 1px solid #4e4949;
   background: linear-gradient(
@@ -504,6 +517,8 @@ span {
 }
 
 .p3Box3 {
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #706868;
   font-size: 1.2rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -549,64 +564,91 @@ span {
   scale: 1.1;
 }
 
-@media screen and (min-width: 150px) and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   html {
     background-image: url(Assets/fundo.jpg);
-    /* background-size: cover; */
     background-position: center;
-
-    height: 155rem;
+    height: 220rem;
     width: 10rem;
+    font-size: 40%;
   }
+
   body {
     overflow: scroll;
   }
-  .transparente {
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    /* width: 100vw; */
-    /* min-height: 100vh; */
+  
+  .header{
+    height: 5rem;
+    margin-top: 4rem;
   }
 
   .nav {
     font-size: 1rem;
     margin-right: 9rem;
     display: none;
-    justify-content: space-around;
+    justify-content: space-around;   
   }
+
+  .transparente{
+    background-color: rgba(0, 0, 0, 0); 
+  }
+
   .acessar button {
-    width: 7rem;
+    width: 10rem;
     height: 2rem;
   }
+
   .cadastro {
-    width: 8rem;
-    height: 2rem;
+    width: 15rem;
+    height: 4rem;
     font-size: 0.5rem;
   }
+
   .logo {
     margin: 2rem 0;
   }
+  
+
   .box {
     flex-direction: column;
     gap: 3rem;
   }
   .box1 {
-    width: 25rem;
-    height: 30rem;
+    width: 40rem;
+    height: 45rem;
     padding-bottom: 2.4rem;
     padding-right: 10rem;
   }
   .p1 {
     padding-left: 29rem;
     position: relative;
-    top: 5rem;
+    top: 1rem;
+  }
+  .imghtml {
+    margin-left: 34rem;
   }
   .p1Box1 {
+    margin-right: 15rem;
+    margin-left: 15rem;
     position: relative;
     left: 5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .box1 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 0.6rem;
+    left: 5rem;
+    
   }
   .box2 {
-    width: 25rem;
-    height: 30rem;
+    width: 40rem;
+    height: 45rem;
     padding-bottom: 5rem;
     padding-right: 10rem;
   }
@@ -616,12 +658,26 @@ span {
     top: 5rem;
   }
   .p2Box2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
     position: relative;
     left: 5rem;
   }
+  .imgcss {
+    margin-left: 22.4rem;
+  }
+  .box2 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 3.3rem;
+    left: 5rem;
+  }
   .box3 {
-    width: 25rem;
-    height: 30rem;
+    width: 40rem;
+    height: 45rem;
     padding-bottom: 6.3rem;
     padding-right: 10rem;
   }
@@ -631,7 +687,315 @@ span {
     top: 5rem;
   }
   .p3Box3 {
+    font-size: 2rem;
+    text-align: center;
     position: relative;
     left: 5rem;
   }
+  .imgjs {
+    margin-right: 6.1rem;
+  }
+  .box3 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 3.2rem;
+    left: 5rem;
+  }
+  
+}
+
+@media screen and (min-width: 401px) and (max-width:730px) {
+  html {
+    background-image: url(Assets/fundo.jpg);
+    background-position: center;
+    height: 250rem;
+    width: 10rem;
+    font-size: 50%;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .nav {
+    font-size: 1rem;
+    margin-right: 9rem;
+    display: none;
+    justify-content: space-around;   
+  }
+
+  .transparente{
+    background-color: rgba(0, 0, 0, 0); 
+  }
+
+  .acessar button {
+    width: 10rem;
+    height: 2rem;
+  }
+
+  .cadastro {
+    width: 15rem;
+    height: 4rem;
+    font-size: 0.5rem;
+  }
+
+  .logo {
+    margin: 2rem 0;
+  }
+  
+  .botaoMain{
+    width: 20rem;
+    height: 5.5rem;
+    font-size: 2rem;
+    }
+
+  .box {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .box1 {
+    width: 50rem;
+    height: 55rem;
+    padding-bottom: 2.4rem;
+    padding-right: 10rem;
+  }
+  .p1 {
+    padding-left: 29rem;
+    position: relative;
+    top: 1rem;
+  }
+  .imghtml {
+    margin-left: 34rem;
+  }
+  .p1Box1 {
+    margin-right: 15rem;
+    margin-left: 15rem;
+    position: relative;
+    left: 5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .box1 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 4.7rem;
+    left: 10rem;
+  }
+
+  .box2 {
+    width: 50rem;
+    height: 55rem;
+    padding-bottom: 5rem;
+    padding-right: 10rem;
+  }
+  .p2 {
+    padding-left: 29rem;
+    position: relative;
+    top: 5rem;
+  }
+  .p2Box2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    position: relative;
+    left: 5rem;
+  }
+  .imgcss {
+    margin-left: 22.4rem;
+  }
+  .box2 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 7.8rem;
+    left: 10rem;
+  }
+  .box3 {
+    width: 50rem;
+    height: 55rem;
+    padding-bottom: 6.3rem;
+    padding-right: 10rem;
+  }
+  .p3 {
+    padding-left: 29rem;
+    position: relative;
+    top: 5rem;
+  }
+  .p3Box3 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    left: 5rem;
+  }
+  .imgjs {
+    margin-right: 6.1rem;
+  }
+  .box3 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+  }
+  
+}
+
+@media screen and (min-width: 731px) and (max-width:1120px){
+
+  html {
+    background-image: url(Assets/fundo.jpg);
+    background-position: center;
+    height: 270rem;
+    width: 10rem;
+    font-size: 50%;
+  }
+
+  body {
+    overflow: scroll;
+  }
+ 
+  header{
+   height: 8rem;
+  }
+
+  .nav{
+    font-size: 2rem;
+  }
+
+  .transparente{
+    background-color: rgba(0, 0, 0, 0); 
+  }
+
+  .acessar button {
+    width: 12rem;
+    height: 3rem;
+  }
+
+  .cadastro {
+    width: 15rem;
+    height: 4rem;
+    font-size: 0.5rem;
+  }
+
+  .logo {
+    margin: 2rem 0;
+  }
+  
+  .botaoMain{
+    width: 20rem;
+    height: 5.5rem;
+    font-size: 2rem;
+    }
+
+  .box {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .box1 {
+    width: 60rem;
+    height: 65rem;
+    padding-bottom: 2.4rem;
+    padding-right: 10rem;
+  }
+  .p1 {
+    padding-left: 29rem;
+    position: relative;
+    top: 1rem;
+  }
+  .imghtml {
+    margin-left: 34rem;
+  }
+  .p1Box1 {
+    margin-right: 13rem;
+    margin-left: 13rem;
+    position: relative;
+    left: 5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  .box1 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 9.2rem;
+    left: 15rem;
+  }
+
+  .box2 {
+    width: 60rem;
+    height: 65rem;
+    padding-bottom: 5rem;
+    padding-right: 10rem;
+  }
+  .p2 {
+    padding-left: 29rem;
+    position: relative;
+    top: 5rem;
+  }
+  .p2Box2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    position: relative;
+    left: 5rem;
+  }
+  .imgcss {
+
+    margin-left: 27.4rem;
+  }
+  .box2 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 12.3rem;
+    left: 15rem;
+  }
+  .box3 {
+    width: 60rem;
+    height: 65rem;
+    padding-bottom: 6.3rem;
+    padding-right: 10rem;
+  }
+  .p3 {
+    padding-left: 29rem;
+    position: relative;
+    top: 5rem;
+  }
+  .p3Box3 {
+    font-size: 2.3rem;
+    text-align: center;
+    position: relative;
+    left: 5rem;
+  }
+  .imgjs {
+    position: relative;
+    left: 11.6rem;
+  }
+  .box3 button {
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    top: 14.8rem;
+    left: 15rem;
+  }
+  
+
+
+
+
+
+
+
+
+
 }
