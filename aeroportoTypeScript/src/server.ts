@@ -1,6 +1,6 @@
 import express from "express";
 import AppDataSource from "./config/Database";
-import { UsuarioController } from "./controller/UsuarioController";
+import { AeroportoController } from "./controller/aeroportoController";
 
 AppDataSource.initialize()
   .then(() => {
@@ -8,10 +8,10 @@ AppDataSource.initialize()
     const app = express();
     app.use(express.json());
 
-    app.post("/usuarios", new UsuarioController().create);
-    app.get("/usuarios/:id", new UsuarioController().get);
-    app.put("/usuarios/:id", new UsuarioController().update);
-    app.delete("/usuarios/:id", new UsuarioController().delete);
+    app.post("/aeroporto", new AeroportoController().create);
+    app.get("/aeroporto/:id", new AeroportoController().get);
+    app.put("/aeroporto/:id", new AeroportoController().update);
+    app.delete("/aeroporto/:id", new AeroportoController().delete);
 
     app.listen(8007);
   })
