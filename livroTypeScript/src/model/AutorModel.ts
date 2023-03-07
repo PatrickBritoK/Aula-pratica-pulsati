@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
+
 @Entity("PATRICK_AUTOR_MVCs")
 export class Autor {
   @PrimaryGeneratedColumn()

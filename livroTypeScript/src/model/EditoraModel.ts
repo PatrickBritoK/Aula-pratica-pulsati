@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
+
 @Entity("PATRICK_EDITORA_MVCs")
 export class Editora {
   @PrimaryGeneratedColumn()
@@ -10,4 +11,6 @@ export class Editora {
 
   @Column({ type: "varchar2" })
   cnpj: string;
+
+  
 }

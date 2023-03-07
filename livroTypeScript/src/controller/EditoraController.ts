@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import AppDataSource from "../config/Database";
-import { Livros as Editora } from "../model/EditoraModel";
+import { Editora as Editora } from "../model/EditoraModel";
 
 export class EditoraController {
   async create(req: Request, res: Response) {
