@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import AppDataSource from "../config/Database";
-import { Livros as Livro } from "../model/LivroModel";
+import { Livro as Livro } from "../model/LivroModel";
 
 export class LivroController {
   async create(req: Request, res: Response) {

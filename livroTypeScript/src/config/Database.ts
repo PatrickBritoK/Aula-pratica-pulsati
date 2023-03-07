@@ -2,7 +2,10 @@ import "dotenv/config";
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 
-import { Livros } from "../model/EditoraModel";
+import { Livro } from "../model/LivroModel";
+import { Editora } from "../model/EditoraModel";
+import { Autor } from "../model/AutorModel";
+
 
 const AppDataSource = new DataSource({
   type: "oracle",
@@ -11,7 +14,7 @@ const AppDataSource = new DataSource({
   username: "system",
   password: "pulsati2023",
   database: "xe",
-  entities: [Livros],
+  entities: [Livro, Editora, Autor],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
 });
 
