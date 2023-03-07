@@ -1,4 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { format } from 'date-fns';
+
 
 @Entity("PATRICK_LIVRO_MVCs")
 export class Livro {
@@ -14,3 +16,5 @@ export class Livro {
   @Column({ type: "date" })
   dataPublicacao: Date;
 }
+const dataPublicacaoBrasileira = format(dataPublicacao, 'dd/MM/yyyy');
+
