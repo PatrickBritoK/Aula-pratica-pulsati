@@ -16,5 +16,5 @@ export class Livro {
   @Column({ type: "date" })
   dataPublicacao: Date;
 }
-const dataPublicacaoBrasileira = format(dataPublicacao, 'dd/MM/yyyy');
+// const dataPublicacaoBrasileira = format(dataPublicacao, 'dd/MM/yyyy');
 
